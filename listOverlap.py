@@ -3,8 +3,7 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c = []
 
 for k in a:
-    for m in b:
-        if (k == m):
-            c.append(k)
+    if (k in b and k not in c):
+        c.append(k)
 
-print(list(set(c)))
+print(c)
