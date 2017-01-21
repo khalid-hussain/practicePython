@@ -1,17 +1,23 @@
-def isPrime(n):
+import math
+
+
+# def isPrimeOld(n: int):
+#     counter = 2
+#     while counter != n:
+#         if n % counter == 0:
+#             return False
+#         counter += 1
+#     return True
+
+
+def isPrime(n: int):
     counter = 2
-    while counter != n:
+    root = round((math.sqrt(n)))
+    while counter != root + 1:
         if n % counter == 0:
             return False
         counter += 1
     return True
-
-    # divisors = [x for x in range(1, n + 1) if n % x == 0]
-    # noOfDivisors = len(divisors)
-    # if noOfDivisors > 2:
-    #     return False
-    # else:
-    #     return True
 
 
 print(isPrime(4))
