@@ -1,3 +1,7 @@
+# Do the extras
+# http://www.practicepython.org/exercise/2014/05/15/14-list-remove-duplicates.html
+
+
 def removeDuplicates(aList: list):
     return list(set(aList))
 
