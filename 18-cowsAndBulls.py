@@ -20,13 +20,12 @@ def checkCowsAndBulls(numberToGuess: int, guessedNumber: int):
 if __name__ == "__main__":
     print("Welcome to the Cows and Bulls Game")
     numberToGuess = random.randint(1000, 9999)
-    numberToGuess = 4018
-    print("NumbertoGuess:", numberToGuess)
 
     while True:
         guessedNumber = input("Enter your guesses. To Exit, type 'q': ")
         if guessedNumber == 'q':
             break
         else:
+            guessedNumber = int(guessedNumber)
             result = checkCowsAndBulls(numberToGuess, guessedNumber)
             print("Cows:", result[0], "Bulls:", result[1])
